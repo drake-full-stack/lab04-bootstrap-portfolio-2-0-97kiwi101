@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,8 +45,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h2>About Me</h2>
-                    <p class = "">My academic and project work span areas such as machine learning, infrastructure, and software development, where I focus on building practical solutions to complex challenges. In addition to my technical skills, I bring experience as a tutor and mentor, helping others understand difficult concepts in computer science and mathematics. This background has strengthened my ability to communicate clearly, collaborate effectively, and adapt my approach to diverse audiences. who might not have as deep technical know how in said feilds I also Volunteer as a camp counsler for Kesem. This is due to the great effects Kesem has had on my life time.</p>
+                    <div class="text-bubble">
+                        <h2>About Me</h2>
+                        <p>My academic and project work span areas such as machine learning, infrastructure, and software development, where I focus on building practical solutions to complex challenges. In addition to my technical skills, I bring experience as a tutor and mentor, helping others understand difficult concepts in computer science and mathematics. This background has strengthened my ability to communicate clearly, collaborate effectively, and adapt my approach to diverse audiences. who might not have as deep technical know how in said feilds I also Volunteer as a camp counsler for Kesem. This is due to the great effects Kesem has had on my life time.</p>
+                    </div>
                 </div>
                 <div class="col-lg-6">
                     <img src="kiwi at a desk.png" class="img-fluid" alt="a cartoon kiwi working at a desk">
@@ -56,7 +59,10 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>My Projects</h2>
+        <div class="text-bubble ">
+            <h2>My Projects</h2>
+        </div>
+        
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <div class="card h-100">
@@ -97,9 +103,29 @@
     <section id="contact">
         <h2>Get In Touch</h2>
         <p>I'd love to connect! Reach out if you'd like to collaborate or just chat about web development.</p>
-        <p>Email: Morgan.Kaponga@drake.edu</p>
-        <p>GitHub: github.com/97kiwi101@gmail.com</p>
-        <p>LinkedIn: https://www.linkedin.com/in/morgan-kaponga-011b35383/</p>
+        <div class="email-container" data-email="Morgan.Kaponga@drake.edu">
+            <span class="material-icons">email</span>
+            <span class="tooltip-text">Morgan.Kaponga@drake.edu</span>
+        </div>
+
+        <!--I did use ai to help with this bottom part but thats due to make sure I make it pop up the new window to better the user experiance and learned how I did that-->
+        <div class="github-container" data-url="hhttps://github.com/97kiwi101">
+            <a href="https://github.com/97kiwi101" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="28" height="28">
+                    <path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 8 0Z"></path>
+                </svg>
+            </a>
+            <span class="tooltip-text">https://github.com/97kiwi101</span>
+        </div>
+        <div class="linkedin-container" data-url="https://www.linkedin.com/in/morgan-kaponga-011b35383/">
+            <a href="https://www.linkedin.com/in/morgan-kaponga-011b35383/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                    <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93-.8 0-1.22.54-1.42 1.07-.08.2-.1.47-.1.74V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.2 1.03 3.2 3.56V19z"></path>
+                </svg>
+            </a>
+            <span class="tooltip-text">https://www.linkedin.com/in/morgan-kaponga-011b35383/</span>
+        </div>
+
     </section>
 
     <footer>

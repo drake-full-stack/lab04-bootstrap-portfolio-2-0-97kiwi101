@@ -1,3 +1,4 @@
+
 /* Basic Reset and Typography */
 * {
     margin: 0;
@@ -5,15 +6,38 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
+:root {
+    /* Define the core color palette */
+    --bs-primary: #000000;
+    --bubble-bg: rgb(191, 222, 191);
+    --bs-secondary: #7f8c8d;    
+    --accent-color: #1abc9c;    
+    --light-bg: #F5E9D3;       
+    --dark-text: #34495e;      
 }
+
+body {
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}
+
+
+.text-bubble {
+    display: inline-block;
+    background-color: white; 
+    padding: 1.5rem;
+    border-radius: 15px;
+    position: relative; /* Required for positioning the tail */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e0e0;
+}
+
+
+
 
 /* Navigation */
 nav {
-    background-color: #333;
+    background-color: white;
     padding: 1rem 0;
 }
 
@@ -45,7 +69,7 @@ section {
 /* Hero Section */
 #hero {
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 #hero h1 {
@@ -68,7 +92,7 @@ h2 {
 
 /* Projects */
 .project {
-    background-color: #f9f9f9;
+    background-color: var(--bubble-bg);
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -96,7 +120,7 @@ h2 {
 
 /* Contact Section */
 #contact {
-    background-color: #f4f4f4;
+    background-color: var(--bubble-bg);
     text-align: center;
 }
 
@@ -107,7 +131,7 @@ h2 {
 /* Footer */
 footer {
     background-color: #333;
-    color: white;
+    color: var(--light-bg);
     text-align: center;
     padding: 2rem;
 }
@@ -126,4 +150,191 @@ footer {
     #hero h1 {
         font-size: 2rem;
     }
+}
+
+/* i used some ai for email cause I was not sure how to use the example and it allow me to understand it better*/
+.email-container {
+    position: relative; /* This is crucial for positioning the tooltip */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Style for the Material Icon */
+.email-container .material-icons {
+    font-size: 28px;
+    vertical-align: middle;
+    color: #333;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* The tooltip that appears on hover */
+.email-container .tooltip-text {
+    visibility: hidden; /* Hide by default */
+    opacity: 0;
+    width: max-content; /* Adjust width to content */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+/* Little arrow for the tooltip */
+.email-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* --- HOVER AND ACTIVE STATES --- */
+
+/* Show the tooltip on hover */
+.email-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animate the icon on hover */
+.email-container:hover .material-icons {
+    color: #EA4335; /* Accent color */
+    transform: scale(1.2);
+}
+
+
+/* i used some ai for email cause I was not sure how to use the example and it allow me to understand it better*/
+
+/* Container for the icon and tooltip */
+.github-container {
+    position: relative; /* Crucial for positioning the tooltip */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Remove default link styles and style the SVG icon */
+.github-container a {
+    text-decoration: none; /* Removes underline from link */
+    vertical-align: middle;
+}
+
+.github-container a svg {
+    fill: #333; /* Icon color */
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+/* The tooltip that appears on hover */
+.github-container .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%; /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.github-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* --- HOVER AND ACTIVE STATES --- */
+
+/* Show the tooltip on hover */
+.github-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animate the icon on hover */
+.github-container:hover a svg {
+    fill: #1a7f37; /* GitHub green accent */
+    transform: scale(1.2);
+}
+
+/* Container for the icon and tooltip */
+.linkedin-container {
+    position: relative; /* Crucial for positioning the tooltip */
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Remove default link styles */
+.linkedin-container a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Style the SVG icon */
+.linkedin-container a svg {
+    fill: #333; /* Default icon color */
+    transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+/* The tooltip that appears on hover */
+.linkedin-container .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: max-content;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.linkedin-container .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* --- HOVER AND ACTIVE STATES --- */
+
+/* Show the tooltip on hover */
+.linkedin-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animate the icon on hover */
+.linkedin-container:hover a svg {
+    fill: #0A66C2; /* Official LinkedIn blue */
+    transform: scale(1.2);
 }
