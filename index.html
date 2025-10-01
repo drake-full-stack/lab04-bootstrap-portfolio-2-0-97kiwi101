@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morgan Kaponga - Portfolio</title>
@@ -8,24 +9,32 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Morgan Kaponga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero/Intro Section -->
     <section id="hero">
         <h1>Hi, I'm Morgan Kaponga</h1>
-        <p>A web developer learning full-stack development at Drake University.</p>
+        <p>My academic and project work span areas such as machine learning, infrastructure, and software development, where I focus on building practical solutions to complex challenges. In addition to my technical skills, I bring experience as a tutor and mentor, helping others understand difficult concepts in computer science and mathematics. This background has strengthened my ability to communicate clearly, collaborate effectively, and adapt my approach to diverse audiences. who might not have as deep technical know how in said feilds I also Volunteer as a camp counsler for Kesem. This is due to the great effects Kesem has had on my life time.</p>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello, I am Morgan Kaponga and I picked up web developemnt to better display and share with the world of what I created! My goal is to give a guide to other new programers to provide tools that I was unable to use or know when I got into computer science</p>
+        <p class = "">Hello, I am Morgan Kaponga and I picked up web developemnt to better display and share with the world of what I created! My goal is to give a guide to other new programers to provide tools that I was unable to use or know when I got into computer science</p>
     </section>
 
     <!-- Projects Section -->
@@ -66,5 +75,6 @@
     <footer>
         <p>&copy; 2024 Morgan Kaponga. Built with HTML, CSS, and Bootstrap.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
